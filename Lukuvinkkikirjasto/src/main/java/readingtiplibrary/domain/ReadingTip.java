@@ -10,6 +10,8 @@ public class ReadingTip {
     private String link;
     private String read;
 
+
+
     public ReadingTip(final Integer id, final String title) {
         this.id = id;
         this.title = title;

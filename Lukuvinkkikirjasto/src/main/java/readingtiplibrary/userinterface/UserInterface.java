@@ -220,7 +220,6 @@ public class UserInterface {
                     io.print("Tarkenna hakua!");
                     break;
             }
-            break;
         }
     }
     
@@ -258,7 +257,6 @@ public class UserInterface {
     private void readingTipMenu(ReadingTip tip) {
         io.print("\nLukuvinkin muokkaus\n---------------");
         io.print(tip.toString() + "\n");
-        
         io.print("Komennot:\nl: muokkaa linkkiä\nluettu: merkkaa luetuksi"
                 + "\nt: muokkaa tageja\npoista: poista lukuvinkki\np: poistu");
         boolean continues = true;
@@ -292,7 +290,7 @@ public class UserInterface {
     }
     
     private void editLink(ReadingTip tip) {
-        io.print("Nykyinen linkki: " + tip.getLink());
+        io.print("Nykyinen linkki: " + dao.getLink(tip));
         io.print("Anna uusi linkki: (tyhjä merkkijono poistaa linkin)");
         String newLink = io.nextLine();
         
